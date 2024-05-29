@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { getCarrito } from "../Data/Cart";
 import { Products } from "../Data/Products";
 import '../styles/cartModal.css';
+import { postData } from "../Data/POST";
 
 export const CartModal = ({handleClose}) => {
     const [totalPrice, setTotalPrice] = useState(0);
@@ -29,7 +30,8 @@ export const CartModal = ({handleClose}) => {
     const handleProceed = () => {
         // Aquí podría ir un método POST a la API
         console.log('POST service not available');
-        handleClose();
+        postData()
+        handleClose(getCarrito());
     }
     return (
         <div className="CartModal">
