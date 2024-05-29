@@ -30,8 +30,8 @@ export const CartModal = ({handleClose}) => {
     const handleProceed = () => {
         // Aquí podría ir un método POST a la API
         console.log('POST service not available');
-        postData()
-        handleClose(getCarrito());
+        postData(getCarrito());
+        handleClose();
     }
     return (
         <div className="CartModal">
